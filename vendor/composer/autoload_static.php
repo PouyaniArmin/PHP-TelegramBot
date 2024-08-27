@@ -12,40 +12,157 @@ class ComposerStaticInitc970f1a266f43a2118de462ce989b839
     );
 
     public static $prefixLengthsPsr4 = array (
+        'U' => 
+        array (
+            'Utilities\\' => 10,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
+            'Services\\' => 9,
         ),
         'M' => 
         array (
             'MongoDB\\' => 8,
+            'Models\\' => 7,
         ),
         'J' => 
         array (
             'Jean85\\' => 7,
         ),
+        'B' => 
+        array (
+            'Bot\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Utilities\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/utilities',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+        ),
+        'Services\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/services',
         ),
         'MongoDB\\' => 
         array (
             0 => __DIR__ . '/..' . '/mongodb/mongodb/src',
         ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/models',
+        ),
         'Jean85\\' => 
         array (
             0 => __DIR__ . '/..' . '/jean85/pretty-package-versions/src',
+        ),
+        'Bot\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/bot',
         ),
     );
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
+        'Bot\\Bot' => __DIR__ . '/../..' . '/src/bot/Bot.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Jean85\\Exception\\ProvidedPackageException' => __DIR__ . '/..' . '/jean85/pretty-package-versions/src/Exception/ProvidedPackageException.php',
+        'Jean85\\Exception\\ReplacedPackageException' => __DIR__ . '/..' . '/jean85/pretty-package-versions/src/Exception/ReplacedPackageException.php',
+        'Jean85\\Exception\\VersionMissingExceptionInterface' => __DIR__ . '/..' . '/jean85/pretty-package-versions/src/Exception/VersionMissingExceptionInterface.php',
+        'Jean85\\PrettyVersions' => __DIR__ . '/..' . '/jean85/pretty-package-versions/src/PrettyVersions.php',
+        'Jean85\\Version' => __DIR__ . '/..' . '/jean85/pretty-package-versions/src/Version.php',
+        'MongoDB\\BulkWriteResult' => __DIR__ . '/..' . '/mongodb/mongodb/src/BulkWriteResult.php',
+        'MongoDB\\ChangeStream' => __DIR__ . '/..' . '/mongodb/mongodb/src/ChangeStream.php',
+        'MongoDB\\Client' => __DIR__ . '/..' . '/mongodb/mongodb/src/Client.php',
+        'MongoDB\\Collection' => __DIR__ . '/..' . '/mongodb/mongodb/src/Collection.php',
+        'MongoDB\\Command\\ListCollections' => __DIR__ . '/..' . '/mongodb/mongodb/src/Command/ListCollections.php',
+        'MongoDB\\Command\\ListDatabases' => __DIR__ . '/..' . '/mongodb/mongodb/src/Command/ListDatabases.php',
+        'MongoDB\\Database' => __DIR__ . '/..' . '/mongodb/mongodb/src/Database.php',
+        'MongoDB\\DeleteResult' => __DIR__ . '/..' . '/mongodb/mongodb/src/DeleteResult.php',
+        'MongoDB\\Exception\\BadMethodCallException' => __DIR__ . '/..' . '/mongodb/mongodb/src/Exception/BadMethodCallException.php',
+        'MongoDB\\Exception\\Exception' => __DIR__ . '/..' . '/mongodb/mongodb/src/Exception/Exception.php',
+        'MongoDB\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/mongodb/mongodb/src/Exception/InvalidArgumentException.php',
+        'MongoDB\\Exception\\ResumeTokenException' => __DIR__ . '/..' . '/mongodb/mongodb/src/Exception/ResumeTokenException.php',
+        'MongoDB\\Exception\\RuntimeException' => __DIR__ . '/..' . '/mongodb/mongodb/src/Exception/RuntimeException.php',
+        'MongoDB\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/mongodb/mongodb/src/Exception/UnexpectedValueException.php',
+        'MongoDB\\Exception\\UnsupportedException' => __DIR__ . '/..' . '/mongodb/mongodb/src/Exception/UnsupportedException.php',
+        'MongoDB\\GridFS\\Bucket' => __DIR__ . '/..' . '/mongodb/mongodb/src/GridFS/Bucket.php',
+        'MongoDB\\GridFS\\CollectionWrapper' => __DIR__ . '/..' . '/mongodb/mongodb/src/GridFS/CollectionWrapper.php',
+        'MongoDB\\GridFS\\Exception\\CorruptFileException' => __DIR__ . '/..' . '/mongodb/mongodb/src/GridFS/Exception/CorruptFileException.php',
+        'MongoDB\\GridFS\\Exception\\FileNotFoundException' => __DIR__ . '/..' . '/mongodb/mongodb/src/GridFS/Exception/FileNotFoundException.php',
+        'MongoDB\\GridFS\\Exception\\StreamException' => __DIR__ . '/..' . '/mongodb/mongodb/src/GridFS/Exception/StreamException.php',
+        'MongoDB\\GridFS\\ReadableStream' => __DIR__ . '/..' . '/mongodb/mongodb/src/GridFS/ReadableStream.php',
+        'MongoDB\\GridFS\\StreamWrapper' => __DIR__ . '/..' . '/mongodb/mongodb/src/GridFS/StreamWrapper.php',
+        'MongoDB\\GridFS\\WritableStream' => __DIR__ . '/..' . '/mongodb/mongodb/src/GridFS/WritableStream.php',
+        'MongoDB\\InsertManyResult' => __DIR__ . '/..' . '/mongodb/mongodb/src/InsertManyResult.php',
+        'MongoDB\\InsertOneResult' => __DIR__ . '/..' . '/mongodb/mongodb/src/InsertOneResult.php',
+        'MongoDB\\MapReduceResult' => __DIR__ . '/..' . '/mongodb/mongodb/src/MapReduceResult.php',
+        'MongoDB\\Model\\BSONArray' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/BSONArray.php',
+        'MongoDB\\Model\\BSONDocument' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/BSONDocument.php',
+        'MongoDB\\Model\\BSONIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/BSONIterator.php',
+        'MongoDB\\Model\\CachingIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/CachingIterator.php',
+        'MongoDB\\Model\\CallbackIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/CallbackIterator.php',
+        'MongoDB\\Model\\ChangeStreamIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/ChangeStreamIterator.php',
+        'MongoDB\\Model\\CollectionInfo' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/CollectionInfo.php',
+        'MongoDB\\Model\\CollectionInfoCommandIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/CollectionInfoCommandIterator.php',
+        'MongoDB\\Model\\CollectionInfoIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/CollectionInfoIterator.php',
+        'MongoDB\\Model\\DatabaseInfo' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/DatabaseInfo.php',
+        'MongoDB\\Model\\DatabaseInfoIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/DatabaseInfoIterator.php',
+        'MongoDB\\Model\\DatabaseInfoLegacyIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/DatabaseInfoLegacyIterator.php',
+        'MongoDB\\Model\\IndexInfo' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/IndexInfo.php',
+        'MongoDB\\Model\\IndexInfoIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/IndexInfoIterator.php',
+        'MongoDB\\Model\\IndexInfoIteratorIterator' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/IndexInfoIteratorIterator.php',
+        'MongoDB\\Model\\IndexInput' => __DIR__ . '/..' . '/mongodb/mongodb/src/Model/IndexInput.php',
+        'MongoDB\\Operation\\Aggregate' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Aggregate.php',
+        'MongoDB\\Operation\\BulkWrite' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/BulkWrite.php',
+        'MongoDB\\Operation\\Count' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Count.php',
+        'MongoDB\\Operation\\CountDocuments' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/CountDocuments.php',
+        'MongoDB\\Operation\\CreateCollection' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/CreateCollection.php',
+        'MongoDB\\Operation\\CreateIndexes' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/CreateIndexes.php',
+        'MongoDB\\Operation\\DatabaseCommand' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/DatabaseCommand.php',
+        'MongoDB\\Operation\\Delete' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Delete.php',
+        'MongoDB\\Operation\\DeleteMany' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/DeleteMany.php',
+        'MongoDB\\Operation\\DeleteOne' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/DeleteOne.php',
+        'MongoDB\\Operation\\Distinct' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Distinct.php',
+        'MongoDB\\Operation\\DropCollection' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/DropCollection.php',
+        'MongoDB\\Operation\\DropDatabase' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/DropDatabase.php',
+        'MongoDB\\Operation\\DropIndexes' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/DropIndexes.php',
+        'MongoDB\\Operation\\EstimatedDocumentCount' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/EstimatedDocumentCount.php',
+        'MongoDB\\Operation\\Executable' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Executable.php',
+        'MongoDB\\Operation\\Explain' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Explain.php',
+        'MongoDB\\Operation\\Explainable' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Explainable.php',
+        'MongoDB\\Operation\\Find' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Find.php',
+        'MongoDB\\Operation\\FindAndModify' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/FindAndModify.php',
+        'MongoDB\\Operation\\FindOne' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/FindOne.php',
+        'MongoDB\\Operation\\FindOneAndDelete' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/FindOneAndDelete.php',
+        'MongoDB\\Operation\\FindOneAndReplace' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/FindOneAndReplace.php',
+        'MongoDB\\Operation\\FindOneAndUpdate' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/FindOneAndUpdate.php',
+        'MongoDB\\Operation\\InsertMany' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/InsertMany.php',
+        'MongoDB\\Operation\\InsertOne' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/InsertOne.php',
+        'MongoDB\\Operation\\ListCollectionNames' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/ListCollectionNames.php',
+        'MongoDB\\Operation\\ListCollections' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/ListCollections.php',
+        'MongoDB\\Operation\\ListDatabaseNames' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/ListDatabaseNames.php',
+        'MongoDB\\Operation\\ListDatabases' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/ListDatabases.php',
+        'MongoDB\\Operation\\ListIndexes' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/ListIndexes.php',
+        'MongoDB\\Operation\\MapReduce' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/MapReduce.php',
+        'MongoDB\\Operation\\ModifyCollection' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/ModifyCollection.php',
+        'MongoDB\\Operation\\RenameCollection' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/RenameCollection.php',
+        'MongoDB\\Operation\\ReplaceOne' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/ReplaceOne.php',
+        'MongoDB\\Operation\\Update' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Update.php',
+        'MongoDB\\Operation\\UpdateMany' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/UpdateMany.php',
+        'MongoDB\\Operation\\UpdateOne' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/UpdateOne.php',
+        'MongoDB\\Operation\\Watch' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/Watch.php',
+        'MongoDB\\Operation\\WithTransaction' => __DIR__ . '/..' . '/mongodb/mongodb/src/Operation/WithTransaction.php',
+        'MongoDB\\UpdateResult' => __DIR__ . '/..' . '/mongodb/mongodb/src/UpdateResult.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
+        'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );

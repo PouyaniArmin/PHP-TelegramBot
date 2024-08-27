@@ -1,4 +1,13 @@
 {
+    "autoload": {
+        "psr-4": { 
+            "Bot\\": "src/bot/",
+            "Models\\": "src/models/",
+            "Services\\": "src/services/",
+            "Utilities\\": "src/utilities/",
+             "Config\\": "config/"
+        }
+    },
     "require": {
         "mongodb/mongodb": "^1.15"
     }
