@@ -17,6 +17,7 @@ return array(
     'Jean85\\' => array($vendorDir . '/jean85/pretty-package-versions/src'),
     'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
     'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
+    'Database\\' => array($baseDir . '/src/database'),
     'Config\\' => array($baseDir . '/config'),
     'Bot\\' => array($baseDir . '/src/bot'),
 );
