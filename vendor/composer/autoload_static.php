@@ -49,6 +49,7 @@ class ComposerStaticInitc970f1a266f43a2118de462ce989b839
         ),
         'C' => 
         array (
+            'Core\\' => 5,
             'Config\\' => 7,
         ),
         'B' => 
@@ -106,6 +107,10 @@ class ComposerStaticInitc970f1a266f43a2118de462ce989b839
         array (
             0 => __DIR__ . '/../..' . '/src/database',
         ),
+        'Core\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core',
+        ),
         'Config\\' => 
         array (
             0 => __DIR__ . '/../..' . '/config',
@@ -121,6 +126,7 @@ class ComposerStaticInitc970f1a266f43a2118de462ce989b839
         'Bot\\Bot' => __DIR__ . '/../..' . '/src/bot/Bot.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Config\\DatabaseConfig' => __DIR__ . '/../..' . '/config/DatabaseConfig.php',
+        'Database\\MongoDB' => __DIR__ . '/../..' . '/src/database/MongoDB.php',
         'Dotenv\\Dotenv' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Dotenv.php',
         'Dotenv\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/ExceptionInterface.php',
         'Dotenv\\Exception\\InvalidEncodingException' => __DIR__ . '/..' . '/vlucas/phpdotenv/src/Exception/InvalidEncodingException.php',
@@ -264,6 +270,7 @@ class ComposerStaticInitc970f1a266f43a2118de462ce989b839
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
         'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+        'Utilities\\ErrorHandler' => __DIR__ . '/../..' . '/src/utilities/ErrorHandler.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
 

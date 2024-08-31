@@ -2,6 +2,7 @@
     "autoload": {
         "psr-4": { 
             "Bot\\": "src/bot/",
+            "Core\\":"src/core/",
             "Database\\":"src/database",
             "Models\\": "src/models/",
             "Services\\": "src/services/",
