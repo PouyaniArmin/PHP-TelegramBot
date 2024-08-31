@@ -16,5 +16,9 @@ class MongoDB extends DatabaseConfig{
         $this->clinet=$this->getConnection();
         $this->collection=$this->clinet->selectCollection($db_name,$collection);
     }
+    public function find($filter=[],array $option=[]){
+
+        return $this->collection->find($filter,$option);
+    }
 
 }
