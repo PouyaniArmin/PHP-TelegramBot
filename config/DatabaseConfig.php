@@ -6,19 +6,32 @@ namespace Config;
 use Dotenv\Dotenv;
 use Exception;
 use MongoDB\Client;
+use Utilities\Env;
 use Utilities\ErrorHandler;
 
 class DatabaseConfig
 {
 
     private string $mongo_url;
+
+    /**
+     * DatabaseConfig constructor.
+     *
+     * Initializes the environment variables by loading them from the .env file.
+     */
     public function __construct()
     {
         $this->initDotEnv();
     }
 
 
-
+    /**
+     * Connects to the MongoDB server using the URL from the environment variables.
+     *
+     * This method creates a new MongoDB client and verifies the connection by listing databases.
+     *
+     * @return Client The MongoDB client instance.
+     */
     private function connectToMongo(): Client
     {
         $client = new Client($this->mongo_url);
@@ -35,20 +48,23 @@ class DatabaseConfig
      */
     private function initDotEnv()
     {
-        $dotenv = Dotenv::createImmutable(dirname(__DIR__));
-        $envFile = $dotenv->safeLoad();
-        if ($envFile === false) {
-            ErrorHandler::throwException('Error loading the .env file', 1);
-        }
-        if (isset($envFile)) {
-            $this->mongo_url = $_ENV['MONGO_URL'];
-        } else {
+        Env::load();
+        $mongoUrl = Env::get('MONGO_URL');
+        if (!$mongoUrl) {
             ErrorHandler::throwException('MONGO_URL is not set in the enviroment file');
         }
+        $this->mongo_url = $mongoUrl;
     }
 
-
-    public function getConnection():Client{
+    /**
+     * Gets a MongoDB client connection.
+     *
+     * This method provides access to the MongoDB client connection, which can be used for database operations.
+     *
+     * @return Client The MongoDB client instance.
+     */
+    public function getConnection(): Client
+    {
         return $this->connectToMongo();
     }
 }
