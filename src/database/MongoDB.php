@@ -11,6 +11,14 @@ class MongoDB extends DatabaseConfig
 {
     protected Client $clinet;
     protected Collection $collection;
+    /**
+     * Constructor for MongoDB class.
+     *
+     * Initializes the MongoDB client and selects the specified collection.
+     *
+     * @param string $db_name The name of the database.
+     * @param string $collection The name of the collection.
+     */
     public function __construct(string $db_name, string $collection)
     {
         parent::__construct();
@@ -107,5 +115,38 @@ class MongoDB extends DatabaseConfig
     public function deleteMany(array $filter, array $option = [])
     {
         return $this->collection->deleteMany($filter, $option);
+    }
+    /**
+     * Create a unique index on the specified fields in the collection.
+     *
+     * @param array $fields The fields to index uniquely.
+     * @throws \Throwable If there is an error creating the index.
+     */
+    public function createUniqueIndex(array $fields)
+    {
+        try {
+            $this->collection->createIndex($fields, ['unique' => true]);
+        } catch (\Throwable $th) {
+            ErrorHandler::throwException('Error creating unique index: ' . $th->getMessage());
+        }
+    }
+    /**
+     * Retrieve a random document from the collection.
+     *
+     * @return array|null A random document or null if no documents are found.
+     * @throws \Throwable If there is an error fetching the document.
+     */
+    public function getRandomDocument()
+    {
+        try {
+            $cursor = $this->collection->aggregate([
+                ['$sample' => ['size' => 1]]
+            ]);
+            $document = iterator_to_array($cursor);
+            return !empty($document) ? reset($document) : null;
+        } catch (\Throwable $th) {
+            ErrorHandler::throwException('Error Fetching Random Document: ' . $th->getMessage());
+            return null;
+        }
     }
 }
