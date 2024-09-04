@@ -40,7 +40,7 @@ class TelegramBot
         $this->startedUser();
         $this->startedChannel();
     }
-    /**
+     /**
      * Handles incoming user messages and executes commands based on the message text.
      *
      * This method checks for specific commands (e.g., '/start' or 'video') and performs
@@ -67,7 +67,7 @@ class TelegramBot
                 break;
         }
     }
-    /**
+     /**
      * Processes incoming channel posts and stores unique video data.
      *
      * This method checks if the incoming channel post contains video data and if so,
@@ -84,7 +84,7 @@ class TelegramBot
             $this->channelPost->insertIfNotExists($filterPost, $channel);
         }
     }
-    /**
+     /**
      * Sends a random video from stored channel posts to a user.
      *
      * @param int $userId The Telegram user ID to send the video to.
@@ -102,7 +102,7 @@ class TelegramBot
             $this->api->sendMessage($userId, 'No videos available at the moment.');
         }
     }
-    /**
+      /**
      * Sends a welcome message with a button to the user.
      *
      * @param int $userId The Telegram user ID to send the message to.
