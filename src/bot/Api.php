@@ -7,6 +7,8 @@ use Utilities\ErrorHandler;
 
 class Api
 {
+
+    private $curlHandler=null;
     private static $apiToken;
     /**
      * Retrieves the Telegram API token from the environment.
@@ -96,15 +98,15 @@ class Api
     public function sendRequest(string $method, $params = []): string
     {
         $url = "https://api.telegram.org/bot" . self::getToken() . "/$method";
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($params));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        $response = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        $error = curl_error($ch);
-        curl_close($ch);
+        $this->curlHandler = curl_init();
+        curl_setopt($this->curlHandler, CURLOPT_URL, $url);
+        curl_setopt($this->curlHandler, CURLOPT_POST, 1);
+        curl_setopt($this->curlHandler, CURLOPT_POSTFIELDS, http_build_query($params));
+        curl_setopt($this->curlHandler, CURLOPT_RETURNTRANSFER, TRUE);
+        $response = curl_exec($this->curlHandler);
+        $httpCode = curl_getinfo($this->curlHandler, CURLINFO_HTTP_CODE);
+        $error = curl_error($this->curlHandler);
+        curl_close($this->curlHandler);
         if ($httpCode !== 200 || $error) {
             ErrorHandler::throwException("HTTP Error $httpCode: $error - Connection to bot failed. Please check URL and API bot.", 1);
         }
